@@ -6,6 +6,7 @@ var users=[
     {first:'ali',last:'essoudani',username:'aliessoudani',dateofbirth:'10/05/1991',email:'aliessoudani@gmail.com',password:'aliessoudani',tweets:[
         {tweet:'Hey guys #morning', created_at:randomDate(new Date(2012, 0, 1), new Date())},{tweet:'i think i need to sleep', created_at:randomDate(new Date(2012, 0, 1), new Date())}]}
 ]
+
 function randomDate(start, end) {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   }
@@ -17,6 +18,7 @@ $(document).ready(function(){
     $('#log').hide()
     $('#create').hide()
     $('#twittler').hide()
+    $('#infos').hide()
 
     $('#logging').click(function() {
         $('#main').animate({top:'100px',opacity:'0'},1000)
@@ -99,6 +101,10 @@ $(document).ready(function(){
                 if(users.length===1){
                     if(users[0].username === username){
                         $('#error').text('').append('Username already exists').append('<br>');
+                    }else if(email===users[0].email){
+                        $('#error').text('').append('This e-mail is already used').append('<br>');
+                    }else if(email.includes('@')===false){
+                        $('#error').text('').append('Please type in a valid e-mail').append('<br>');
                     }else if(users[0].username!==username && $('#pass1').val()===$('#pass2').val()){
                             users.push(userr)
                             $('#error').text('')
@@ -111,11 +117,24 @@ $(document).ready(function(){
                             $('#twittler').animate({top:'100px',opacity:'1'},1000)
                             $('#usinguser').text('@'+username)
                             $('#userTweets').text('')
+                            $('#first').val('')
+                            $('#last').val('')
+                            $('#user').val('')
+                            $('#dateofbirth').val('')
+                            $('#email').val('')
+                            $('#pass1').val('')
+                            $('#pass2').val('')
                     }
                 }else if(users.length !== 1) {
                     for(var i=0; i<users.length; i++){
                         if(users[i].username === username){
                             $('#error').text('').append('Username already exists').append('<br>')
+                            break;
+                        }else if(email===users[0].email){
+                            $('#error').text('').append('This e-mail is already used').append('<br>');
+                            break;
+                        }else if(email.includes('@')===false){
+                            $('#error').text('').append('Please type in a valid e-mail').append('<br>');
                             break;
                         }else if(users[i].username!==username && $('#pass1').val()===$('#pass2').val()){
                             nb++;
@@ -131,6 +150,13 @@ $(document).ready(function(){
                                 $('#twittler').animate({top:'100px',opacity:'1'},1000)
                                 $('#usinguser').text('@'+username)
                                 $('#userTweets').text('')
+                                $('#first').val('')
+                                $('#last').val('')
+                                $('#user').val('')
+                                $('#dateofbirth').val('')
+                                $('#email').val('')
+                                $('#pass1').val('')
+                                $('#pass2').val('')
                                 break;
                             }
                         }
@@ -150,6 +176,18 @@ $(document).ready(function(){
                 }
             }
         }
+        $('.tweeter').click(function() {
+            var stock=$(this).text()
+            var ss=stock.slice(1)
+            var s=$('#usinguser').text().slice(1)
+            for(var i=0; i<users.length; i++){
+                if(users[i].username===ss && users[i].username!==s){
+                    $('#infos').remove()
+                    $('#infoss').append("<div id='infos'></div>")
+                    $('#infos').append(users[i].first+' '+users[i].last+', born on '+users[i].dateofbirth+'. Posted '+users[i].tweets.length+' times.<br>'+'E-mail: '+users[i].email)
+                }
+            }
+        })
     })
     $('#close').click(function() {
         $('#twittler').animate({top:'100px',opacity:'0'},1000)
@@ -161,10 +199,16 @@ $(document).ready(function(){
         $('#ha').append('<div id="userTweets"></div>')
         $('#main').show()
         $('#main').animate({top:'100px',opacity:'1'},1000)
+        $('#infos').remove()
+        $('#infoss').append("<div id='infos'></div>")
+        $('#infos').hide()
     })
     $('#deleteTweets').click(function() {
         $('#newTweets').remove()
         $('#haha').append('<div id="newTweets"></div>')
+        $('#infos').remove()
+        $('#infoss').append("<div id='infos'></div>")
+        $('#infos').hide()
     })
     $('#showMy').click(function() {
         for(var i=0; i<users.length; i++){
@@ -175,6 +219,18 @@ $(document).ready(function(){
                 }
             }
         }
+        $('.tweeter').click(function() {
+            var stock=$(this).text()
+            var ss=stock.slice(1)
+            var s=$('#usinguser').text().slice(1)
+            for(var i=0; i<users.length; i++){
+                if(users[i].username===ss && users[i].username!==s){
+                    $('#infos').remove()
+                    $('#infoss').append("<div id='infos'></div>")
+                    $('#infos').append(users[i].first+' '+users[i].last+', born on '+users[i].dateofbirth+'. Posted '+users[i].tweets.length+' times.<br>'+'E-mail: '+users[i].email)
+                }
+            }
+        })
     })
     $('#delMy').click(function() {
         $('#userTweets').remove()
@@ -208,4 +264,5 @@ $(document).ready(function(){
         $('#toadd').val('')
         $('#hashtag').val('')
     })
+    
 })
