@@ -1,0 +1,180 @@
+body {
+    background-image: url(twitt.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+#main {
+    background-color: darkgrey;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;
+    height:430px;
+    width:30%;
+    border-radius:50px;
+    opacity: 0;
+}
+.bordered {
+    border-style: solid;
+    border-width: 2px;
+}
+#twittler {
+    opacity: 0;
+}
+#logo {
+    width:15%
+}
+#title {
+    width:80%
+}
+#logout {
+    width:20%
+}
+#info {
+    border:2px solid;
+    width:100%;
+}
+#info2 {
+    border:2px solid;
+    width:100%;
+}
+#info2 tr{
+    border:2px solid;
+    width:100%;
+}
+#log {
+    background-color: darkgrey;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;
+    height:430px;
+    width:30%;
+    border-radius:50px;
+    opacity: 0;
+}
+#error {
+    color:red;
+}
+#create {
+    background-color: darkgrey;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;
+    height:480px;
+    width:30%;
+    border-radius:50px;
+    opacity: 0;
+}
+#welcome {
+    text-align:center;
+    font-weight:bold;
+    font-size:25px;
+}
+#logWelcome {
+    text-align:center;
+    font-weight:bold;
+    font-size:25px;
+}
+#createWelcome {
+    text-align:center;
+    font-weight:bold;
+    font-size:25px;
+}
+#elements {
+    margin-top: 45%;
+    margin-left: 25%;
+    width:50%;
+}
+#logElements {
+    margin-top: 20%;
+    margin-left: 25%;
+    width:50%;
+}
+#createElements {
+    margin-top: 0%;
+    margin-left: 40%;
+    width:50%;
+    height:40%;
+}
+.inputs {
+    border-radius:25px;
+    height:15px;
+}
+.intro {
+    font-weight: bold
+}
+#manipulationButtons {
+    margin-top: 40%;
+    margin-left: 40%;
+    width:50%;
+}
+.buttons {
+    border-radius:25px;
+}
+.buttons:hover {
+    background-color:#6E6969;
+}
+#createbuttons {
+    margin-top:10%;
+    height:20%;
+}
+#error {
+    margin-top:10%;
+}
+#t1 {
+    width:49%
+}
+#t2 {
+    width:49%
+}
+.tweeter {
+    border:2px solid;
+    font-size:45px;
+    font-weight: bold;
+}
+.tweeter:hover {
+    background-color: darkgrey;
+    color:red;
+}
+.tweet {
+    border:2px solid;
+}
+#yes {
+    border:2px solid;
+    width:100%;
+    height:100%;
+}
+#usinguser {
+    font-size:18px;
+    font-weight:bold;
+    color:blue;
+    width:10%
+}
+#ha {
+    width:49%
+}
+#haha {
+    width:49%
+}
+#rights {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        color:white;
+}
+#rights:hover {
+    color:red;
+}
+#userTweets {
+    margin-top:0%;
+    height:100%
+}

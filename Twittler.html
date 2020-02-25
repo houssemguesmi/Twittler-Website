@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Twittler.css"/>
+  </head>
+  <body>
+
+  <div id='main'>
+    <p id='welcome'>Welcome To Our Website.</p>
+      <p class='intro'>- The Twitler website will alow you to post some tweets and share your day with your friends</p>
+      <br><br>
+    <div id='manipulationButtons'> 
+      <button id='logging' class='buttons'>Log In</button>
+      <button id='creation' class='buttons'>Sign Up</button>
+    </div>
+  </div>
+
+<div id='log'>
+  <p id='logWelcome'>Welcome To The Log In Page.</p>
+  <div id='logElements'> 
+    <center>
+      <form>
+        <label>Type In Your Username:</label>
+        <br>
+        <input id='username' class='inputs' type='text'>
+      </form>
+      <br>
+      <form>
+        <label>Type In Your Password:</label>
+        <br><br>
+        <input id='password' class='inputs' type='password'>
+      </form>
+      <br><br><br>
+      <input id='loginaccount' class='buttons' type='button' value='Login'>
+      <br><br>
+      <input id='homefromlog' class='buttons' type='button' value='Home'>
+    </center>   
+  </div>
+</div>
+    <div id='create'>
+      <p id='createWelcome'>Sign Up & create Your account.</p>
+      <table>
+        <tr>
+          <td id='t1'>
+            <div id='createElements'> 
+              <form>
+                <label>First Name:</label>
+                <input id='first' class='inputs' type='text'>
+              </form>
+              <br>
+              <form>
+                <label>Last Name:</label>
+                <input id='last' class='inputs' type='text'>
+              </form>
+              <br>
+              <form>
+                <label>Username:</label>
+                <input id='user' class='inputs' type='text'>
+              </form>
+              <br>
+              <form>
+                <label>Date Of Birth:</label>
+                <input id='dateofbirth' class='inputs' type='text'>
+              </form>
+              <br>
+              <form>
+                <label>E-mail</label>
+                <input id='email' class='inputs' type='text'>
+              </form>
+              <br>
+              <label>Password</label>
+                <input id='pass1' class='inputs' type='password'>
+              </form>
+              <br><br>
+              <label>Repeat Password</label>
+                <input id='pass2' class='inputs' type='password'>
+              </form>
+              <br>
+          </div>
+          </td>
+          <td id='t2'>
+            <div id='createbuttons'>
+              <center>
+              <p id='error'></p>
+              <input id='createButton' class='buttons' type='button' value='Sign Up'>
+              <br><br>
+              <input id='homefromcreate' class='buttons' type='button' value='Home'> 
+            </center> 
+            </div>    
+          </td>
+        </tr>
+  
+          
+      </table>
+    </div>
+
+
+
+
+
+
+<div id='twittler'>
+  <div>
+    <table id='info'>
+      <tbody>
+        <tr>
+          <td id="logo">
+            <div>
+              <marquee style='width:100px'>
+                <img src="https://image.flaticon.com/icons/png/512/23/23931.png" style='height:50px'>
+              </marquee>
+            </div>
+          </td>
+          <td id='title'>
+            <div>
+              <strong>
+                <p id="webTitle">Twittler!</p>
+              </strong>
+            </div>
+          </td>
+          <td id='usinguser'>
+            @
+          </td>
+          <td id='logout'>
+            <input id='close' type="button" class='buttons'  value="Log Out" class="buttons">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<table id='info2'>
+  <tbody>
+    <tr>
+      <th class='bordered' id="here" colspan="4">
+        <input class='buttons' type="button" id="showTweets" value="Show All Tweets">
+        <input class='buttons' type="button" id="deleteTweets" value="Delete The Tweets">
+        <input class='buttons' type="button" id="showMy" value="Show My Tweets">
+        <input class='buttons' type="button" id="delMy" value="Delete My Tweets">
+      </th>
+    </tr>
+    <tr id="adding">
+      <th class='bordered'>
+        <input class='buttons'  type="button" id="addTweet" value="Post A Tweet">
+      </th>
+      <th class='bordered'>
+        <input type="button" class='buttons' id="clearInputs" value="Clear the inputs">
+      </th>
+      <td class='bordered'>
+        <form class="form2">
+        <label>Your Tweet : </label>
+        <input type="text" id="toadd" value="">
+        </form>
+      </td>
+      <td class='bordered'>
+        <form class="form3">
+          <label>Your Hashtag : #</label>
+          <input type="text" id="hashtag" value="">
+        </form>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+  <table id='yes'>
+    <tbody>
+      <tr>
+        <td id="haha">
+          <div id="newTweets">
+          </div>
+        </td>
+        <td id="ha">
+          <div id="userTweets">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="Twittler.js"></script>
+  </body>
+  <center>
+    <footer id='rights'>
+      Copyright © 2020: Houssem Guesmi. Twittler Website. RBK Project 1.
+    </footer>
+  </center>
+</html>
